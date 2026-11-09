@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — vorq</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --grey-100: #f5f5f5;
+      --grey-200: #e8e8e8;
+      --grey-400: #999999;
+      --grey-600: #555555;
+      --grey-800: #222222;
+      --purple: #534AB7;
+      --purple-light: #EEEDFe;
+      --red: #dc2626;
+      --red-light: #fef2f2;
+      --green: #16a34a;
+      --green-light: #f0fdf4;
+      --yellow: #d97706;
+      --yellow-light: #fffbeb;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--grey-800);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    /* Header */
+    .header {
+      background: var(--black);
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .header-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .last-updated {
+      font-size: 12px;
+      color: var(--grey-400);
+    }
+
+    /* Hero */
+    .hero {
+      background: var(--black);
+      padding: 64px 24px 56px;
+      text-align: center;
+      border-bottom: 1px solid #1a1a1a;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      color: var(--grey-400);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -1px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      color: var(--grey-400);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Container */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--grey-100);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 56px;
+    }
+
+    .toc h2 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--grey-600);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      padding-left: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+
+    .toc li { font-size: 13px; }
+
+    .toc a {
+      color: var(--purple);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .toc a:hover { text-decoration: underline; }
+
+    /* Sections */
+    .section {
+      margin-bottom: 52px;
+      scroll-margin-top: 80px;
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.4px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--grey-200);
+    }
+
+    .section h3 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--black);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--grey-600);
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .section ul, .section ol {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .section li {
+      font-size: 15px;
+      color: var(--grey-600);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+
+    /* Info cards */
+    .info-card {
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .info-card.purple {
+      background: var(--purple-light);
+      border-left: 3px solid var(--purple);
+    }
+
+    .info-card.red {
+      background: var(--red-light);
+      border-left: 3px solid var(--red);
+    }
+
+    .info-card.green {
+      background: var(--green-light);
+      border-left: 3px solid var(--green);
+    }
+
+    .info-card.yellow {
+      background: var(--yellow-light);
+      border-left: 3px solid var(--yellow);
+    }
+
+    .info-card p {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: var(--grey-800);
+    }
+
+    .info-card strong { color: var(--black); }
+
+    /* Table */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .data-table th {
+      background: var(--black);
+      color: var(--white);
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .data-table th:first-child { border-radius: 8px 0 0 0; }
+    .data-table th:last-child { border-radius: 0 8px 0 0; }
+
+    .data-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--grey-200);
+      color: var(--grey-600);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: var(--grey-100); }
+
+    /* Highlight box */
+    .highlight-box {
+      background: var(--black);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin: 28px 0;
+    }
+
+    .highlight-box h3 {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p {
+      color: var(--grey-400);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    .highlight-box ul {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+
+    .highlight-box li {
+      color: var(--grey-400);
+      font-size: 14px;
+      line-height: 1.7;
+      margin-bottom: 5px;
+    }
+
+    /* Refund box */
+    .refund-box {
+      background: var(--black);
+      border-radius: 16px;
+      padding: 32px 36px;
+      margin: 28px 0;
+    }
+
+    .refund-box h3 {
+      color: var(--white);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+    }
+
+    .refund-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .refund-item {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .refund-item label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--grey-400);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 6px;
+    }
+
+    .refund-item span {
+      font-size: 14px;
+      color: var(--white);
+      line-height: 1.5;
+    }
+
+    .refund-item.highlight {
+      border-color: var(--purple);
+      background: #0f0d1f;
+    }
+
+    .refund-item.highlight span { color: #a89ee8; }
+
+    /* Contact box */
+    .contact-box {
+      background: var(--black);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      letter-spacing: -0.4px;
+    }
+
+    .contact-box p {
+      font-size: 14px;
+      color: var(--grey-400);
+      margin-bottom: 24px;
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .contact-item {
+      background: #161616;
+      border: 1px solid #2a2a2a;
+      border-radius: 10px;
+      padding: 16px 18px;
+    }
+
+    .contact-item label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--grey-400);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+    }
+
+    .contact-item span { font-size: 14px; color: var(--white); }
+    .contact-item a { color: var(--purple); text-decoration: none; font-size: 14px; }
+
+    /* Footer */
+    .footer {
+      background: var(--grey-100);
+      border-top: 1px solid var(--grey-200);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .footer p { font-size: 13px; color: var(--grey-400); line-height: 1.6; }
+    .footer strong { color: var(--grey-600); }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .toc ol { grid-template-columns: 1fr; }
+      .refund-grid { grid-template-columns: 1fr; }
+      .contact-details { grid-template-columns: 1fr; }
+      .header-inner { flex-direction: column; gap: 6px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">vorq</div>
+      <div class="last-updated">Last updated: September 2026</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-badge">Legal Document</div>
+    <h1>Terms of Service</h1>
+    <p>By using vorq you agree to these terms. Please read them carefully before creating an account or making any purchase.</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- TOC -->
+    <div class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#s1">Acceptance of Terms</a></li>
+        <li><a href="#s2">Eligibility</a></li>
+        <li><a href="#s3">Your Account</a></li>
+        <li><a href="#s4">Acceptable Use</a></li>
+        <li><a href="#s5">Prohibited Conduct</a></li>
+        <li><a href="#s6">Subscription Plans</a></li>
+        <li><a href="#s7">Payments and Billing</a></li>
+        <li><a href="#s8">Refund Policy</a></li>
+        <li><a href="#s9">Account Suspension and Termination</a></li>
+        <li><a href="#s10">Content Ownership</a></li>
+        <li><a href="#s11">Community Guidelines</a></li>
+        <li><a href="#s12">Privacy</a></li>
+        <li><a href="#s13">Disclaimers</a></li>
+        <li><a href="#s14">Limitation of Liability</a></li>
+        <li><a href="#s15">Changes to Terms</a></li>
+        <li><a href="#s16">Governing Law</a></li>
+        <li><a href="#s17">Contact Us</a></li>
+        <li><a href="#s18">Grievance Officer</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section" id="s1">
+      <div class="section-number">Section 01</div>
+      <h2>Acceptance of Terms</h2>
+      <p>Welcome to vorq. These Terms of Service govern your use of the vorq mobile application and all related services operated by Deborshi Bora, North Haiborgaon, Nagaon, Assam, India.</p>
+      <p>By downloading, installing, or using vorq you confirm that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree with any part of these terms you must stop using the app immediately and delete it from your device.</p>
+      <div class="info-card purple">
+        <p><strong>These terms form a legally binding agreement between you and vorq.</strong> Your continued use of the app after any changes to these terms constitutes your acceptance of the updated terms.</p>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="s2">
+      <div class="section-number">Section 02</div>
+      <h2>Eligibility</h2>
+      <p>To use vorq you must meet the following requirements:</p>
+      <ul>
+        <li>You must be at least 13 years of age</li>
+        <li>Users between 13 and 18 years of age require parental or guardian consent</li>
+        <li>You must have the legal capacity to enter into a binding agreement</li>
+        <li>You must not be prohibited from using the app under the laws of your country</li>
+        <li>You must not have a previously terminated vorq account unless we have expressly permitted you to create a new one</li>
+      </ul>
+      <div class="info-card yellow">
+        <p><strong>For Education Plan institutions:</strong> The institution admin is responsible for ensuring all students, teachers, and parents who are added to the platform meet the eligibility requirements and that appropriate parental consent has been obtained for users under 18.</p>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="s3">
+      <div class="section-number">Section 03</div>
+      <h2>Your Account</h2>
+      <h3>Account Creation</h3>
+      <p>You may create an account using a username and password or by providing an email address. You are not required to provide a phone number unless you choose to. You agree to provide accurate and truthful information during registration and to keep your account information up to date.</p>
+
+      <h3>Account Security</h3>
+      <p>You are responsible for maintaining the confidentiality of your account credentials. You must not share your password with anyone. You are responsible for all activity that occurs under your account. If you suspect unauthorized access to your account you must notify us immediately at vorq2026@gmail.com.</p>
+
+      <h3>One Account Per Person</h3>
+      <p>Each person may maintain only one personal account. Creating multiple accounts to evade a ban, abuse free trial offers, or manipulate platform features is strictly prohibited and will result in all associated accounts being permanently terminated.</p>
+
+      <h3>Account Verification</h3>
+      <p>We may require you to verify your identity, professional credentials, or institution affiliation for certain features such as verified badges, Business Plan workspaces, or Education Plan institutions. Submitting false or misleading information during verification is grounds for immediate permanent account termination without any refund.</p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section" id="s4">
+      <div class="section-number">Section 04</div>
+      <h2>Acceptable Use</h2>
+      <p>You agree to use vorq only for lawful purposes and in a manner that does not infringe the rights of others. You agree to:</p>
+      <ul>
+        <li>Treat other users with respect and dignity</li>
+        <li>Use the app in accordance with all applicable local, state, national, and international laws</li>
+        <li>Only share content that you have the right to share</li>
+        <li>Report content or users that violate these terms using the in-app report feature</li>
+        <li>Keep your account credentials secure and not share them with others</li>
+        <li>Use the Business Plan workspace only for legitimate business purposes</li>
+        <li>Use the Education Plan workspace only for legitimate educational purposes</li>
+      </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section" id="s5">
+      <div class="section-number">Section 05</div>
+      <h2>Prohibited Conduct</h2>
+      <p>The following are strictly prohibited on vorq. Violation of any of these may result in immediate account suspension or permanent termination:</p>
+
+      <h3>Harmful Content</h3>
+      <ul>
+        <li>Posting, sharing, or transmitting any content that is illegal, harmful, threatening, abusive, harassing, defamatory, or obscene</li>
+        <li>Sharing content that exploits or harms minors in any way including child sexual abuse material — this will result in immediate permanent termination and reporting to law enforcement</li>
+        <li>Inciting violence, hatred, or discrimination based on race, ethnicity, religion, gender, sexual orientation, disability, or nationality</li>
+        <li>Sharing content that glorifies self-harm, suicide, or eating disorders</li>
+        <li>Sharing graphic violence or gore</li>
+      </ul>
+
+      <h3>Privacy Violations</h3>
+      <ul>
+        <li>Sharing another person's private information without their consent including phone numbers, addresses, financial information, or private photos</li>
+        <li>Recording or sharing conversations without all participants' knowledge and consent</li>
+        <li>Impersonating any person, organization, or entity</li>
+        <li>Stalking, monitoring, or harassing other users</li>
+      </ul>
+
+      <h3>Platform Abuse</h3>
+      <ul>
+        <li>Attempting to hack, reverse engineer, or compromise the security of the app</li>
+        <li>Using automated bots, scripts, or tools to access the app without our written permission</li>
+        <li>Spamming other users with unsolicited messages</li>
+        <li>Manipulating platform features such as reactions, reviews, or discovery rankings</li>
+        <li>Creating fake accounts or impersonating verified users</li>
+        <li>Attempting to circumvent any account ban or restriction</li>
+        <li>Using the app to distribute malware, viruses, or any malicious code</li>
+      </ul>
+
+      <h3>Commercial Restrictions</h3>
+      <ul>
+        <li>Using the app to run unauthorized commercial operations without the appropriate Business Plan subscription</li>
+        <li>Selling or transferring your account to another person</li>
+        <li>Using the app to conduct fraudulent transactions or scams</li>
+        <li>Running pyramid schemes, multi-level marketing, or similar operations</li>
+      </ul>
+
+      <div class="info-card red">
+        <p><strong>Zero tolerance:</strong> Any content involving the sexual exploitation of minors will result in immediate permanent account termination, reporting to the National Center for Missing and Exploited Children, and reporting to local law enforcement authorities. We take this matter with the utmost seriousness.</p>
+      </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section" id="s6">
+      <div class="section-number">Section 06</div>
+      <h2>Subscription Plans</h2>
+      <p>vorq offers the following subscription plans with different features and limits:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Plan</th>
+            <th>Who It Is For</th>
+            <th>Key Feature</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Free</strong></td>
+            <td>All users by default</td>
+            <td>Basic messaging, 1GB storage, 1 group</td>
+          </tr>
+          <tr>
+            <td><strong>Personal Premium</strong></td>
+            <td>Individual users</td>
+            <td>Unlimited messaging, 100GB storage, premium features</td>
+          </tr>
+          <tr>
+            <td><strong>Business Plan</strong></td>
+            <td>Business owners</td>
+            <td>Business workspace, team management, client portals</td>
+          </tr>
+          <tr>
+            <td><strong>Education Plan</strong></td>
+            <td>Institution admins</td>
+            <td>Institution workspace, attendance, assignment system</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Plan Restrictions</h3>
+      <ul>
+        <li>Only active Business Plan subscribers can create business groups and workspaces</li>
+        <li>Only active Education Plan subscribers can create education groups and institution workspaces</li>
+        <li>Free users and Personal Premium users cannot create business or education groups under any circumstances</li>
+        <li>Member limits per workspace tier are strictly enforced and cannot be exceeded</li>
+        <li>Features are tied to the active subscription and are immediately affected if a subscription is cancelled or expires</li>
+      </ul>
+
+      <h3>Founding Member Pricing</h3>
+      <p>Founding member pricing offered during the launch period is locked at the discounted rate as long as the subscription remains active without cancellation. If a founding member cancels their subscription they permanently lose the founding member rate and must subscribe at the current regular price.</p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section" id="s7">
+      <div class="section-number">Section 07</div>
+      <h2>Payments and Billing</h2>
+
+      <h3>Payment Processing</h3>
+      <p>All payments for subscriptions, extra storage, and token purchases are processed through Google Play Billing. By making a purchase you agree to Google Play's terms of service in addition to these terms. We never directly handle, store, or have access to your payment card information.</p>
+
+      <h3>Subscription Billing</h3>
+      <ul>
+        <li>Subscriptions are billed in advance on a monthly or yearly basis depending on the plan you choose</li>
+        <li>Your subscription automatically renews at the end of each billing period unless you cancel before the renewal date</li>
+        <li>Renewal charges are processed through Google Play at the price current at the time of renewal</li>
+        <li>You will be notified of any price changes before they take effect</li>
+      </ul>
+
+      <h3>Token Purchases</h3>
+      <ul>
+        <li>Tokens are purchased through Google Play Billing and credited to your account immediately after successful payment</li>
+        <li>Tokens have no cash value and cannot be exchanged for real money</li>
+        <li>Tokens do not expire as long as your account remains active</li>
+        <li>Tokens are non-transferable between accounts</li>
+        <li>Upon account deletion all unused tokens are forfeited with no refund</li>
+      </ul>
+
+      <h3>Extra Storage Subscriptions</h3>
+      <ul>
+        <li>Extra storage is billed monthly at ₹99 per 10GB through Google Play Billing</li>
+        <li>Multiple extra storage subscriptions stack to provide additional storage</li>
+        <li>Extra storage subscriptions renew automatically each month</li>
+        <li>If an extra storage subscription is cancelled storage is maintained until the end of the current billing period</li>
+        <li>After cancellation if stored content exceeds the remaining storage limit new uploads will be blocked but existing content will not be deleted</li>
+      </ul>
+
+      <h3>Failed Payments</h3>
+      <p>If a payment fails Google Play will attempt to retry the payment automatically. During the retry period your subscription remains active. If payment ultimately fails your subscription will be downgraded or cancelled and you will be notified to update your payment method through Google Play.</p>
+    </div>
+
+    <!-- Section 8 — Refund Policy -->
+    <div class="section" id="s8">
+      <div class="section-number">Section 08</div>
+      <h2>Refund Policy</h2>
+
+      <div class="refund-box">
+        <h3>Refund Summary</h3>
+        <div class="refund-grid">
+          <div class="refund-item">
+            <label>Voluntary Cancellation</label>
+            <span>No refund for the current billing period. Access continues until period ends.</span>
+          </div>
+          <div class="refund-item">
+            <label>Account Terminated by User</label>
+            <span>No refund for current period. Prorated refund not available for voluntary deletion.</span>
+          </div>
+          <div class="refund-item highlight">
+            <label>Account Deleted Due to Reports</label>
+            <span>Prorated refund for remaining full months only. Current partial month is not refunded.</span>
+          </div>
+          <div class="refund-item">
+            <label>Token Purchases</label>
+            <span>No refunds on token purchases once credited to account.</span>
+          </div>
+          <div class="refund-item">
+            <label>Extra Storage</label>
+            <span>No refund for current month. Cancelled storage remains until period ends.</span>
+          </div>
+          <div class="refund-item">
+            <label>Technical Issues</label>
+            <span>Evaluated case by case. Contact support within 7 days.</span>
+          </div>
+        </div>
+      </div>
+
+      <h3>Account Terminated Due to Policy Violations</h3>
+      <p>If your account is permanently terminated as a result of verified reports of policy violations the following refund policy applies:</p>
+      <ul>
+        <li>You will receive a prorated refund for the remaining complete months left in your subscription period</li>
+        <li>The current partial month in which the termination occurs is not eligible for a refund</li>
+        <li>Refunds are calculated based on the number of full calendar months remaining after the termination date</li>
+        <li>Refunds are processed through Google Play and may take 5 to 10 business days to appear</li>
+        <li>No refund is issued for token balances remaining in a terminated account</li>
+        <li>No refund is issued if termination is due to extremely serious violations including but not limited to child exploitation, illegal content, or fraud</li>
+      </ul>
+
+      <div class="info-card purple">
+        <p><strong>Refund example:</strong> If you have a yearly Personal Premium subscription and your account is terminated due to verified reports with 4 complete months remaining you will receive a refund equivalent to 4 months of the monthly equivalent price. The month in which termination occurred is not included in the refund calculation.</p>
+      </div>
+
+      <h3>Voluntary Cancellation</h3>
+      <p>If you choose to cancel your subscription voluntarily your subscription will remain active until the end of the current billing period. No prorated refund is provided for voluntary cancellations. You must cancel through Google Play before your next renewal date to avoid being charged for the next period.</p>
+
+      <h3>Refund Requests</h3>
+      <p>All refund requests must be submitted within 30 days of the charge. Refund requests can be submitted to vorq2026@gmail.com with your account details and reason for the request. For Google Play purchases you may also request refunds directly through Google Play's refund process.</p>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section" id="s9">
+      <div class="section-number">Section 09</div>
+      <h2>Account Suspension and Termination</h2>
+
+      <h3>Suspension</h3>
+      <p>We may temporarily suspend your account if we believe you have violated these terms, your account has been compromised, or there is suspicious activity. During suspension you will not be able to access your account. We will notify you of the suspension and the reason via your registered email if available.</p>
+
+      <h3>Termination by Us</h3>
+      <p>We reserve the right to permanently terminate your account without prior notice if you:</p>
+      <ul>
+        <li>Violate any of the prohibited conduct listed in Section 5</li>
+        <li>Provide false information during registration or verification</li>
+        <li>Attempt to circumvent a previous ban or suspension</li>
+        <li>Engage in fraud, illegal activity, or abuse of the platform</li>
+        <li>Receive multiple verified reports from other users for serious violations</li>
+        <li>Create a hostile or unsafe environment for other users</li>
+      </ul>
+
+      <h3>Termination by You</h3>
+      <p>You may delete your account at any time through the app settings. Upon account deletion your personal data will be removed within 30 days in accordance with our Privacy Policy. Encrypted message content is technically inaccessible to us and will be deleted when you remove the app from your device.</p>
+
+      <h3>Effect of Termination</h3>
+      <p>Upon termination whether by you or by us your right to use vorq immediately ceases. Your data will be deleted according to our Privacy Policy. Workspace owners whose accounts are terminated should be aware that their Business or Education workspace will also be terminated affecting all members.</p>
+
+      <div class="info-card yellow">
+        <p><strong>Appeal process:</strong> If you believe your account was terminated in error you may appeal by contacting us at vorq2026@gmail.com within 14 days of termination. We will review your appeal and respond within 7 business days. Our decision on appeals is final.</p>
+      </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section" id="s10">
+      <div class="section-number">Section 10</div>
+      <h2>Content Ownership</h2>
+
+      <h3>Your Content</h3>
+      <p>You retain ownership of all content you create and share on vorq including messages, photos, videos, posts, and other materials. We do not claim ownership of your content.</p>
+
+      <h3>License to vorq</h3>
+      <p>By posting content on vorq you grant us a limited, non-exclusive, royalty-free license to store, process, and deliver your content solely for the purpose of providing our services to you. We do not use your content for advertising, training AI models, or any purpose beyond delivering the app experience to you.</p>
+
+      <h3>Content You Share</h3>
+      <p>You are solely responsible for all content you share on vorq. By sharing content you confirm that you have the right to share it and that it does not violate any third party's intellectual property rights, privacy rights, or any applicable law.</p>
+
+      <h3>Content Removal</h3>
+      <p>We reserve the right to remove any content that violates these terms without prior notice. Repeated violations may result in account termination.</p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section" id="s11">
+      <div class="section-number">Section 11</div>
+      <h2>Community Guidelines</h2>
+      <p>All users of vorq are expected to follow our community guidelines which are an extension of these terms:</p>
+
+      <div class="highlight-box">
+        <h3>Core Community Principles</h3>
+        <ul>
+          <li>Be respectful and kind to every person on the platform regardless of their background</li>
+          <li>Share only content you are proud to put your name to</li>
+          <li>Protect the privacy of others as you would want your own privacy protected</li>
+          <li>Use reporting tools responsibly — false reports are a violation of these terms</li>
+          <li>Communities and groups are governed by their own rules in addition to these terms</li>
+          <li>Business and education workspaces are professional environments and must be used accordingly</li>
+        </ul>
+      </div>
+
+      <h3>Group and Community Rules</h3>
+      <p>Group and community owners and administrators are responsible for ensuring their spaces comply with these terms. We reserve the right to shut down any community that consistently violates our terms regardless of who owns it. Group owners must not use their administrative position to harass, discriminate against, or exploit their members.</p>
+
+      <h3>Business Workspace Conduct</h3>
+      <p>Business Plan workspace owners are responsible for the conduct of their workspace members. Using a business workspace to harass employees, conduct illegal business operations, or evade labor laws is strictly prohibited and will result in immediate workspace termination.</p>
+
+      <h3>Education Workspace Conduct</h3>
+      <p>Education Plan institution admins are responsible for maintaining a safe learning environment. Any use of the education workspace that endangers students, facilitates inappropriate teacher-student relationships, or violates child protection laws will result in immediate termination and reporting to relevant authorities.</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section" id="s12">
+      <div class="section-number">Section 12</div>
+      <h2>Privacy</h2>
+      <p>Your privacy is important to us. Our collection, use, and protection of your personal information is governed by our Privacy Policy which is incorporated into these Terms of Service by reference. By using vorq you also agree to our Privacy Policy.</p>
+      <p>Our Privacy Policy is available at the same location where you found these Terms of Service and within the app under Settings then Privacy Policy.</p>
+    </div>
+
+    <!-- Section 13 -->
+    <div class="section" id="s13">
+      <div class="section-number">Section 13</div>
+      <h2>Disclaimers</h2>
+      <p>vorq is provided on an as-is and as-available basis without any warranties of any kind either express or implied. We do not warrant that:</p>
+      <ul>
+        <li>The app will be available without interruption or error at all times</li>
+        <li>The app will be free from viruses or other harmful components</li>
+        <li>Any content on the platform is accurate, complete, or reliable</li>
+        <li>The app will meet your specific requirements or expectations</li>
+      </ul>
+
+      <div class="info-card yellow">
+        <p><strong>Service interruptions:</strong> We may occasionally need to suspend the app for maintenance, updates, or technical reasons. We will provide advance notice where possible but cannot guarantee uninterrupted service.</p>
+      </div>
+
+      <h3>Third Party Content</h3>
+      <p>vorq may contain links to or integrate with third party services. We are not responsible for the content, privacy practices, or reliability of any third party service. Your use of third party services is at your own risk and subject to their own terms and conditions.</p>
+
+      <h3>User Generated Content</h3>
+      <p>We do not endorse, verify, or take responsibility for any content posted by users on vorq. Users are solely responsible for the content they post and the consequences of sharing it.</p>
+    </div>
+
+    <!-- Section 14 -->
+    <div class="section" id="s14">
+      <div class="section-number">Section 14</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law vorq and its owner Deborshi Bora shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the app including but not limited to:</p>
+      <ul>
+        <li>Loss of data or content</li>
+        <li>Loss of business or profits</li>
+        <li>Personal injury resulting from your use of the app</li>
+        <li>Unauthorized access to your account or data</li>
+        <li>Conduct of third parties on the platform</li>
+        <li>Any errors or omissions in the app content</li>
+      </ul>
+      <p>Our total liability to you for any claims arising from your use of vorq shall not exceed the total amount you paid to us in the 3 months immediately preceding the event giving rise to the claim.</p>
+
+      <div class="info-card yellow">
+        <p><strong>Some jurisdictions do not allow the exclusion of certain warranties or limitation of liability for certain damages.</strong> In such cases our liability will be limited to the maximum extent permitted by applicable law in your jurisdiction.</p>
+      </div>
+    </div>
+
+    <!-- Section 15 -->
+    <div class="section" id="s15">
+      <div class="section-number">Section 15</div>
+      <h2>Changes to Terms</h2>
+      <p>We reserve the right to modify these Terms of Service at any time. We will notify you of significant changes by:</p>
+      <ul>
+        <li>Sending a notification inside the app</li>
+        <li>Updating the Last Updated date at the top of this document</li>
+        <li>For material changes requiring your consent showing a prompt inside the app before you can continue using it</li>
+      </ul>
+      <p>If you continue to use vorq after changes are posted you are deemed to have accepted the updated terms. If you do not agree with the updated terms you must stop using the app and delete your account.</p>
+    </div>
+
+    <!-- Section 16 -->
+    <div class="section" id="s16">
+      <div class="section-number">Section 16</div>
+      <h2>Governing Law</h2>
+      <p>These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from these terms or your use of vorq shall be subject to the exclusive jurisdiction of the courts of Nagaon, Assam, India.</p>
+      <p>These terms are also subject to applicable provisions of the Information Technology Act 2000, the Information Technology Rules 2011, and any other applicable Indian laws and regulations.</p>
+
+      <div class="info-card purple">
+        <p><strong>Dispute resolution:</strong> Before initiating any legal proceedings we encourage you to contact us at vorq2026@gmail.com to resolve any dispute informally. We will make every reasonable effort to resolve your concern within 30 days of receiving your complaint.</p>
+      </div>
+    </div>
+
+    <!-- Section 17 -->
+    <div class="section" id="s17">
+      <div class="section-number">Section 17</div>
+      <h2>Contact Us</h2>
+      <p>If you have any questions about these Terms of Service or need to report a violation please contact us. We aim to respond to all inquiries within 48 hours for premium users and 5 business days for free users.</p>
+    </div>
+
+    <!-- Contact Box -->
+    <div class="contact-box">
+      <h2>Get in Touch</h2>
+      <p>We are here to help with any questions about these terms or your account.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <label>App Name</label>
+          <span>vorq</span>
+        </div>
+        <div class="contact-item">
+          <label>Support Email</label>
+          <a href="mailto:vorq2026@gmail.com">vorq2026@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <label>In-App Support</label>
+          <span>Settings → Help → Contact Support</span>
+        </div>
+        <div class="contact-item">
+          <label>Response Time</label>
+          <span>48 hrs Premium · 5 days Free</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 18 -->
+    <div class="section" id="s18" style="margin-top: 52px;">
+      <div class="section-number">Section 18</div>
+      <h2>Grievance Officer</h2>
+      <p>In accordance with the Information Technology Act 2000 and the Information Technology Rules 2011 the details of the Grievance Officer are:</p>
+      <table class="data-table">
+        <tbody>
+          <tr>
+            <td><strong>Name</strong></td>
+            <td>Deborshi Bora</td>
+          </tr>
+          <tr>
+            <td><strong>Designation</strong></td>
+            <td>Founder and Grievance Officer, vorq</td>
+          </tr>
+          <tr>
+            <td><strong>Email</strong></td>
+            <td><a href="mailto:vorq2026@gmail.com" style="color: var(--purple);">vorq2026@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td><strong>Address</strong></td>
+            <td>North Haiborgaon, Nagaon, Assam — 782002, India</td>
+          </tr>
+          <tr>
+            <td><strong>Response Time</strong></td>
+            <td>Within 30 days of receiving a complaint</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p><strong>vorq Terms of Service</strong> · Last updated September 2026 · Effective immediately upon posting</p>
+    <p style="margin-top: 6px;">© 2026 vorq. All rights reserved. · <a href="mailto:vorq2026@gmail.com" style="color: var(--purple); text-decoration: none;">vorq2026@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
